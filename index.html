@@ -1,146 +1,210 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Gaming Website</title>
-	<style>
-		body {
-			background-color: #f0f0f0;
-			font-family: Arial, sans-serif;
-		}
-		
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Website</title>
 
-header nav ul {
-  
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-    display: flex;
-    justify-content: space-between;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header nav ul li {
-    margin-right: 20px;
- font-size:1.2rem;
-  
-}
-header nav {
-    background-color:grey ;
-  height:30px
-}
-header nav a {
-    
-    color: #fff;
-    text-decoration: none;
-}
-		
-		.content {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-		}
-		.hero {
-    background-color: #555;
-    background-size: 100% 300px;
-    background-position: 0% 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-		.game {
-			background-color: #fff;
-			border: 1px solid #ddd;
-			border-radius: 10px;
-			margin: 20px;
-			padding: 20px;
-			width: 200px;
-		}
-		
-		.game img {
-			width: 100%;
-			height: 150px;
-			border-radius: 10px 10px 0 0;
-		}
-		
-		.game h2 {
-			margin-top: 0;
-		}
-		
-		.game p {
-			margin-bottom: 20px;
-		}
-		
-		.game button {
-			background-color: #333;
-			color: #fff;
-			border: none;
-			padding: 10px 20px;
-			border-radius: 10px;
-			cursor: pointer;
-		}
-		
-		.game button:hover {
-			background-color: #444;
-		}
-	</style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6fb;
+            color: #222;
+        }
+
+        header {
+            background: #202b46;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 18px;
+            font-size: 30px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #78dce8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #dbeafe, #e9e7ff);
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #202b46;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+            padding: 45px 20px;
+        }
+
+        .game {
+            background: white;
+            width: 280px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s;
+        }
+
+        .game:hover {
+            transform: translateY(-5px);
+        }
+
+        .game img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .game-info {
+            padding: 20px;
+        }
+
+        .game h3 {
+            color: #202b46;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .game p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .game button {
+            width: 100%;
+            background: #4358a8;
+            color: white;
+            border: none;
+            padding: 11px;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .game button:hover {
+            background: #304484;
+        }
+
+        footer {
+            background: #202b46;
+            color: #ddd;
+            text-align: center;
+            padding: 18px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                gap: 18px;
+            }
+
+            .hero h2 {
+                font-size: 26px;
+            }
+
+            .game {
+                width: 100%;
+                max-width: 340px;
+            }
+        }
+    </style>
+</head>
 
 <body>
-  
-	<header>
-	  		<h1>Gaming Website</h1>
+
+    <header>
+        <h1>🎮 Gaming Website</h1>
+
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Games</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-    
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="#games">Games</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
-  <section class="hero">
-            <h1>Welcome to our Gaming Website!</h1>
-            
-        </section>
-	
-	<div class="content">
-		<div class="game">
-			<img src="2048.jpg" alt="Game 1">
-			<h2>2048 Game</h2>
-			<p>2048 is so good game.
-				You will enjoy it.
-				Have fun.
-			</p>
-		
-			  <button onclick="document.location='2048/index.html'">Play Now</button>
 
-			
-		</div>
-		
-		<div class="game">
-			<img src="candy.jpg" alt="Game 2">
-			<h2>Candy Crush</h2>
-			<p>
-				Candy Crush is so good game.
-				You will enjoy it.
-				Have fun.
-			</p>			
-			  <button onclick="document.location='candy/index.html'">Play Now</button>
-		</div>
-	</div>
-	 
-	<footer>
-		<p>&copy; Gaming Website</p>
-	  
-	</footer>
- 
+    <section class="hero">
+        <h2>Welcome to Our Gaming Website!</h2>
+        <p>Take a break, play your favorite games, and have fun.</p>
+    </section>
+
+    <section class="content" id="games">
+
+        <div class="game">
+            <img src="2048.jpg" alt="2048 Game">
+
+            <div class="game-info">
+                <h3>2048 Game</h3>
+                <p>Combine number tiles, sharpen your mind, and challenge yourself to reach 2048!</p>
+
+                <button onclick="location.href='2048/index.html'">
+                    Play Now →
+                </button>
+            </div>
+        </div>
+
+        <div class="game">
+            <img src="candy.jpg" alt="Candy Crush Game">
+
+            <div class="game-info">
+                <h3>Candy Crush</h3>
+                <p>Match colorful candies, discover combinations, and enjoy this fun puzzle game.</p>
+
+                <button onclick="location.href='candy/index.html'">
+                    Play Now →
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Gaming Website. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
